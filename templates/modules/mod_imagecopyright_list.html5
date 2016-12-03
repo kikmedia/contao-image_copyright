@@ -1,0 +1,16 @@
+<?php $this->extend('block_unsearchable') ?>
+
+<?php $this->block('content') ?>
+
+<?php if ( count($this->files) ): ?>
+    <ul>
+    <?php foreach ($this->files as $file ): ?>
+        <li>
+            <img src="<?=$file['src']?>">
+            <p><?=$file['ic_copyright']?></p>
+        </li>
+    <?php endforeach ?>
+    </ul>
+<?php endif ?>
+
+<?php $this->endblock() ?>
